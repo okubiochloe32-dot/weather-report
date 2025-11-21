@@ -107,3 +107,98 @@ button {
         height: 60px;
     }
 }
+
+.weatherBox {
+    animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#searchButton {
+    transition: transform 0.2s, background-color 0.1s;
+}
+
+#searchButton:hover {
+    transform: scale(1.05);
+    background-color: rgb(180, 140, 255);
+}
+
+#weatherInput {
+    transition: box-shadow 0.3s;
+}
+
+#weatherInput:focus {
+    box-shadow: 0 0 10px rgba(122, 32, 255, 0.7);
+}
+
+#searchButton:active {
+    transform: scale(0.95);
+}
+
+.shake {
+    animation: shakeAnim 0.4s ease;
+}
+
+@keyframes shakeAnim {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+.weatherBox {
+    transition: box-shadow 0.6s ease;
+}
+
+.weatherBox:hover {
+    box-shadow:
+        0 0 20px rgba(122, 32, 255, 0.9),
+        0 0 40px rgba(255, 0, 255, 0.7),
+        0 0 60px rgba(122, 32, 255, 0.6);
+}
+
+/* MOBILE ANIMATIONS */
+@media (max-width: 600px) {
+
+    .weatherBox {
+        animation: fadeInMobile 1s ease-out;
+        width: 90%;
+        transform: scale(1);
+    }
+
+    @keyframes fadeInMobile {
+        from {
+            opacity: 0;
+            transform: translateY(30px) scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    #searchButton {
+        transition: transform 0.2s;
+    }
+
+    #searchButton:active {
+        transform: scale(0.93);
+    }
+
+    #weatherInput:focus {
+        transform: scale(1.05);
+        box-shadow: 0 0 12px rgba(122, 32, 255, 0.7);
+    }
+}
+

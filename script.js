@@ -32,3 +32,4 @@ searchBtn.addEventListener("click", () => {
   const city = weatherInput.value;
   fetchWeather(city);
 });
+
