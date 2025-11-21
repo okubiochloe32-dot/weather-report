@@ -54,6 +54,7 @@ button {
     color: blueviolet;
     height: 90px;
     width: 550px;
+    max-width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -75,36 +76,38 @@ button {
    RESPONSIVE MEDIA QUERIES
 ---------------------------*/
 
-/* Tablets */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
-    }
+@media (max-width: 400px) {
+  .weather-container {
+    padding: 15px;
+  }
 
-    button, input {
-        height: 42px;
-    }
+  .weather-container input,
+  .weather-container button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .weather-container .report {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
 }
 
-/* Phones */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
+@media (width <= 500px){
+    .weatherBox{
+        height: 400px;
     }
-
-    .weatherBox {
-        padding: 15px;
-        border-radius: 20px;
+    #weatherReport{
+        height: 110px;
     }
-
-    button, input {
-        font-size: 1rem;
-        height: 40px;
+    h1{
+        font-size: 30px;
     }
-
-    #weatherReport {
-        height: 60px;
-    }
+    
 }
 
 .weatherBox {
