@@ -18,7 +18,7 @@ h1 {
     background-color: rgb(244, 217, 243);
     width: 90%;
     max-width: 700px;
-    height: auto;
+    height: 350px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -52,9 +52,8 @@ button {
     border: 0.5px solid black;
     border-radius: 8px;
     color: blueviolet;
-    height: 70px;
-    width: 100%;
-    max-width: 550px;
+    height: 90px;
+    width: 550px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -201,4 +200,3 @@ button {
         box-shadow: 0 0 12px rgba(122, 32, 255, 0.7);
     }
 }
-

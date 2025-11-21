@@ -8,10 +8,15 @@ function clearInputScreen() {
 }
 
 async function fetchWeather(city) {
+  if (!city.trim()) {
+    weatherReport.innerHTML = "Please enter a city name.";
+    return;
+  }
   try {
     const result = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${myApiKey}&q=${city}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=${myApiKey}&q=${encodeURIComponent(city)}&aqi=no`
     );
+
 
     if (result.status === 200) {
       const data = await result.json();
@@ -32,4 +37,6 @@ searchBtn.addEventListener("click", () => {
   const city = weatherInput.value;
   fetchWeather(city);
 });
+
+
 
