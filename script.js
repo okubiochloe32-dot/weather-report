@@ -22,7 +22,7 @@ async function fetchWeather(city) {
       const data = await result.json();
       console.log(data);
 
-      weatherReport.innerHTML = `In ${city} located in ${data.location.country} in ${data.location.continent}, the temperature is ${data.current.temp_c}°, the humidity is ${data.current.humidity}%. The latitude and longitude are ${data.location.lat} and ${data.location.lon} respectively.
+      weatherReport.innerHTML = `In ${city} located in ${data.location.country}, the temperature is ${data.current.temp_c}°, the humidity is ${data.current.humidity}%. The latitude and longitude are ${data.location.lat} and ${data.location.lon} respectively.
             We also have our weather conditions to be on ${data.current.condition.text}`;
 
       clearInputScreen();
